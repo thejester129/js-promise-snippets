@@ -1,7 +1,15 @@
-const a = async () => {
-  await new Promise((resolve) => setTimeout(resolve, 500));
-  console.log("in async");
-};
+function doThings(function1, function2) {
+  function1();
+  function2();
+}
 
-a();
-console.log("async should be done");
+doThings(
+  async () => {
+    await new Promise((resolve) => setTimeout(resolve, 500));
+    console.log("first thing");
+  },
+  () => console.log("second thing")
+);
+
+// second thing
+// first thing
