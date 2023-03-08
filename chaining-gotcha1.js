@@ -19,6 +19,8 @@ aThenB(
     }, 100)
   )
 );
+// ...then 2
+// 1
 
 // correct
 aThenB = (promise1, promise2) => {
@@ -42,3 +44,5 @@ aThenB(
       }, 100)
     )
 );
+// 3
+// ...then 4
